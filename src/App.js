@@ -16,6 +16,7 @@ const choice = {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByxl21CEOgZgxly6ILu-ZE39e6RrAGFSQGw&usqp=CAU"
   }
 }
+
 function App() {
   const [userSelect,setUserSelect] = useState(null);
   const [computerSelect,setComputerSelect] = useState(null);
@@ -25,6 +26,14 @@ function App() {
     let computerChoice = randomChoice()
     setComputerSelect(computerChoice);
     setResult(judgement(choice[userchoice],computerChoice));
+  }
+
+  const randomChoice =()=>{
+    let itemArray = Object.keys(choice); //객체의키값만 뽑아서 배열로만들어주는 함수
+    
+    let randomItem = Math.floor(Math.random() * itemArray.length);
+    let final = itemArray[randomItem];
+    return choice[final];
   }
 
   const judgement=(user,computer)=>{
@@ -38,17 +47,7 @@ function App() {
       return computer.name == "Paper" ? "Win":"lose"
     else if(user.name == "Paper") 
       return computer.name == "Rock" ? "Win":"lose"
-  
   };
-
-  const randomChoice =()=>{
-    let itemArray = Object.keys(choice); //객체의키값만 뽑아서 배열로만들어주는 함수
-    
-    let randomItem = Math.floor(Math.random() * itemArray.length);
-    let final = itemArray[randomItem];
-    return choice[final];
-  }
-
   return (
     <div>
       <div className='main'>
