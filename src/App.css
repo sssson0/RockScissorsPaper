@@ -1,6 +1,7 @@
-.Box{
+.box{
   border: 1px solid black;
   width: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,9 +18,9 @@
   justify-content: center;
 }
 
-.Win {
-  border: 10px solid aqua;
-  color: aqua;
+.win {
+  border: 10px solid rgb(50, 196, 99);
+  color: rgb(50, 196, 99);
 }
 .lose {
   border: 10px solid red;

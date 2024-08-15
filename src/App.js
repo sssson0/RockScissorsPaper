@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       <div className='main'>
-        <Box title="You" item={userSelect} result={result}/>
+        <Box title="You"   item={userSelect} result={result}/>
         <Box title="Computer" item={computerSelect} result={result}/>
       </div>
       <div className='main'> 
